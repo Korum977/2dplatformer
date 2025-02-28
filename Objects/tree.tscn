@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8dkwbq2uj8t4"]
+
+[ext_resource type="Texture2D" uid="uid://klvhr8rk1xa6" path="res://Art/Legacy-Fantasy - High Forest 2.3/Trees/Green-Tree.png" id="1_2u4v8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1"]
+radius = 16.0
+height = 96.0
+
+[node name="Tree" type="StaticBody2D" groups=["trees"]]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2u4v8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 32)
+shape = SubResource("CapsuleShape2D_1")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://njjmgnleudx7"]
+
+[ext_resource type="Texture2D" uid="uid://cnb6vef35n3ad" path="res://Art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="1_a0eut"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ywkh"]
+size = Vector2(122, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8lex"]
+atlas = ExtResource("1_a0eut")
+region = Rect2(0, 12, 78, 66)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(26, 11)
+shape = SubResource("RectangleShape2D_4ywkh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(24, 9.5)
+scale = Vector2(1.61538, 1.28788)
+texture = SubResource("AtlasTexture_k8lex")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://drx501kpqe5i1"]
+
+[ext_resource type="Script" path="res://Objects/Platform.gd" id="1_p4k2d"]
+[ext_resource type="Texture2D" uid="uid://cnb6vef35n3ad" path="res://Art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="2_6divn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(48, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldy6a"]
+atlas = ExtResource("2_6divn")
+region = Rect2(0, 0, 400, 400)
+
+[node name="BouncePlatform" type="StaticBody2D"]
+collision_layer = 2
+script = ExtResource("1_p4k2d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_ldy6a")
+region_enabled = true
+region_rect = Rect2(96, 152, 48, 8)
